@@ -15,11 +15,32 @@
 
 ....
 
-### Тест случаи според критериумот Every path
+### Тест случаи според критериумот Multiple condition
 
-.... 
+TXX - User user = null;
+FTX - User user = new User(
+		"username",
+		null,
+		"Kristijan@finki.com");
+FFT - User user = new User(
+		"username",
+		"password",
+		null);
+FFF - User user = new User (
+		"username",
+		"password",
+		"Kristijan@finki.com");
+
+
 
 ### Објаснување на напишаните unit tests
 
-...
-...
+Multiple Condition:
+Имаме вкупно 4 тест случаеви каде што во првите 3 тест случаеви очекуваме RuntimeException со порака: "Mandatory information missing!" а во четвртиот не очекуваме RuntimeException. Во првиот тест имаме user = null, и веднаш се очекува RuntimeException. Во вториот тест правиме нов user но password = null ---> RuntimeException. Во третиот тест имаме user и password но email = null ---> RuntimeException. Во четвртиот тест ги има задоволено сите критериуми и веќе не очекуваме RuntimeException.
+
+
+
+
+
+
+
